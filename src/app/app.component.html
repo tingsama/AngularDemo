@@ -1,5 +1,15 @@
-<div class="content" role="main">
-  <input type="text" [(ngModel)]="title">
-  <hr>
-  <span>{{ title }} app is running!</span>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>{{ title }} app is running!</h3>
+      <div class="form-group">
+        <label for="changeTitle">Customize your title here: </label>
+        <input type="text" class="form-control" id="changeTitle" aria-describedby="titleChange" [(ngModel)]="title">
+        <small id="titleChange" class="form-text text-muted">hi~ I'm a little helper text</small>
+      </div>
+      <hr>
+      <app-servers></app-servers>
+    </div>
+  </div>
 </div>
+

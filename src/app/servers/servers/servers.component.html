@@ -1,0 +1,18 @@
+<div class="input-group mb-3">
+    <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Server Name" 
+        [(ngModel)]="createdServerName">
+    <div class="input-group-append">
+        <button 
+            class="btn btn-outline-secondary"
+            [disabled]="!allowNewServer"
+            (click)="onCreateServer()">Add Server
+        </button>
+    </div>
+</div>
+
+<span>{{ serverCreationStatus }}</span>
+<p></p>
+<p *ngFor="let server of servers">{{ server }}</p>
