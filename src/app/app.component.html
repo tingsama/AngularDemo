@@ -1,14 +1,21 @@
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h3>{{ title }} app is running!</h3>
-      <div class="form-group">
-        <label for="changeTitle">Customize your title here: </label>
-        <input type="text" class="form-control" id="changeTitle" aria-describedby="titleChange" [(ngModel)]="title">
-        <small id="titleChange" class="form-text text-muted">hi~ I'm a little helper text</small>
+      <br>
+      <div class="col-md-4 offset-md-4">
+        <h1 class="text-center">{{ title }}</h1>
+        <div>
+          <small for="changeTitle" class="form-text text-muted text-center">Customize your title here: </small>
+          <input type="text" class="form-control form-control-sm text-center" id="changeTitle" aria-describedby="titleChange" [(ngModel)]="title">
+        </div>
       </div>
+      <br>
       <hr>
-      <app-servers></app-servers>
+      <app-new-note></app-new-note>
+      <br>
+      <hr>
+      <app-note-list></app-note-list>
     </div>
   </div>
 </div>
