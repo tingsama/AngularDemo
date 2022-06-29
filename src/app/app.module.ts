@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { NewNoteComponent } from './new-note/new-note.component';
 import { NoteListComponent } from './note-list/note-list.component';
+import { NoteItemComponent } from './note-list/note-item/note-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NoteListComponent } from './note-list/note-list.component';
     HeaderComponent,
     DropdownDirective,
     NewNoteComponent,
-    NoteListComponent
+    NoteListComponent,
+    NoteItemComponent
   ],
   imports: [
     BrowserModule,

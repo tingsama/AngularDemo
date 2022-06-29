@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   title: string = 'Reminder';
+  // loadedFeature = 'new-notes';
+  loadedFeature = 'to-dos';
 
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }

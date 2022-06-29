@@ -1,27 +1,54 @@
-<form>
+<form (ngSubmit)="onAddNote(f)" #f="ngForm">
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="inputStartTime">Start Time</label>
-            <input type="datetime-local" class="form-control" id="inputStartTime" placeholder="Start Time">
+            <input 
+              type="datetime-local" 
+              class="form-control" 
+              id="inputStartTime" 
+              placeholder="Start Time"
+              name="starttime"
+              ngModel>
         </div>
         <div class="form-group col-md-4">
             <label for="inputEndTime">End Time</label>
-            <input type="datetime-local" class="form-control" id="inputEndTime" placeholder="End Time">
+            <input 
+              type="datetime-local" 
+              class="form-control" 
+              id="inputEndTime" 
+              placeholder="End Time"
+              name="endtime"
+              ngModel>
         </div>
         <div class="form-group col-md-4">
             <label for="inputLocation">Location</label>
-            <input type="text" class="form-control" id="inputLocation" placeholder="Location">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="inputLocation" 
+              placeholder="Location"
+              name="location"
+              ngModel>
         </div>
         <div class="form-group col-md-4">
             <label for="inputCategory">Category</label>
-            <select id="inputCategory" class="form-control">
+            <select 
+              id="inputCategory" 
+              class="form-control"
+              name="category"
+              ngModel>
                 <option selected>To-Do</option>
                 <option>Reminder</option>
             </select>
         </div>
         <div class="form-group col-md-4">
             <div class="form-check">
-                <input class="form-check-input ml-2 mt-5" type="checkbox" id="gridCheck">
+                <input 
+                  class="form-check-input ml-2 mt-5" 
+                  type="checkbox" 
+                  id="gridCheck"
+                  name="importance"
+                  ngModel>
                 <label class="form-check-label ml-3 mt-2-6" for="gridCheck">Important</label>
                 <!-- <input class="form-check-input" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">Important</label> -->
@@ -29,7 +56,13 @@
         </div>
         <div class="form-group col-md-12">
             <label for="textareaDetails">Details</label>
-            <textarea type="textarea" class="form-control" id="textareaDetails" placeholder="Details"></textarea>
+            <textarea 
+              type="textarea" 
+              class="form-control" 
+              id="textareaDetails" 
+              placeholder="Details"
+              name="details"
+              ngModel></textarea>
         </div>
     </div>
     <!-- <div class="form-row">
@@ -49,5 +82,5 @@
         <input type="text" class="form-control" id="inputZip">
       </div>
     </div> -->
-    <button type="submit" class="btn btn-primary" mdbWavesEffect>Add</button>
+    <button type="submit" class="btn btn-outline-secondary col-md-2">Add</button>
   </form>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Note } from '../note-list/note.model'
 
 @Component({
   selector: 'app-new-note',
@@ -11,5 +13,11 @@ export class NewNoteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  onAddNote(form: NgForm) {
+    const value = form.value;
+    const newNote = new Note(value.starttime, value.endtime, value.location,
+      value.category, value.importance, value.details)
+    console.log(newNote);
+  }
 }

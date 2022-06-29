@@ -1,22 +1,19 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
       <br>
-      <div class="col-md-4 offset-md-4">
+      <div>
         <h1 class="text-center">{{ title }}</h1>
-        <div>
+        <div class="w-25 row mx-auto justify-content-center align-items-center flex-column">
           <small for="changeTitle" class="form-text text-muted text-center">Customize your title here: </small>
           <input type="text" class="form-control form-control-sm text-center" id="changeTitle" aria-describedby="titleChange" [(ngModel)]="title">
         </div>
       </div>
       <br>
       <hr>
-      <app-new-note></app-new-note>
-      <br>
-      <hr>
-      <app-note-list></app-note-list>
+      <app-new-note *ngIf="loadedFeature==='new-notes'"></app-new-note>
+      <app-note-list *ngIf="loadedFeature==='to-dos'"></app-note-list>
     </div>
   </div>
 </div>
-
